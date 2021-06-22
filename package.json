@@ -18,7 +18,8 @@
     "bundle:esm:min": "terser --ecma 6 --compress --mangle --module -o dist/index.min.mjs -- dist/index.mjs && gzip -9 -c dist/index.min.mjs > dist/index.min.mjs.gz",
     "bundle:umd": "rollup dist/index.js --file dist/index.umd.js --format umd --name sayHello",
     "bundle:cjs": "rollup dist/index.js --file dist/index.cjs --format cjs --name sayHello",
-    "bundle:umd:min": "terser --ecma 6 --compress --mangle -o dist/index.umd.min.js -- dist/index.umd.js && gzip -9 -c dist/index.umd.min.js > dist/index.umd.min.js.gz"
+    "bundle:umd:min": "terser --ecma 6 --compress --mangle -o dist/index.umd.min.js -- dist/index.umd.js && gzip -9 -c dist/index.umd.min.js > dist/index.umd.min.js.gz",
+    "example":"npx parcel serve example/index.html"
   },
   "keywords": [],
   "author": "",
