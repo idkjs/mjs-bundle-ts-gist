@@ -1,4 +1,6 @@
-# [The easiest way to bundle a simple TypeScript web application](https://gist.github.com/danieldietrich/999abe1aaee11dcdf91d182807f7ee3f)
+# The easiest way to bundle a simple TypeScript web application via [@danieldietrich](https://twitter.com/danieldietrich)
+
+##[gist](https://gist.github.com/danieldietrich/999abe1aaee11dcdf91d182807f7ee3f)
 
 Packaging JavaScript applications can be a bit overwhelming. The popular project [uglifyjs](https://github.com/mishoo/UglifyJS) does not support ES6, it is cumbersome to configure the allmighty [Webpack](https://webpack.js.org), bundlers like [Parcel](https://parceljs.org) and [Microbundle](https://www.npmjs.com/package/microbundle) still have [bugs](https://github.com/parcel-bundler/parcel/issues/2820) or do not compile to ESM bundles that work in a browser. It is hard to figure out the best way to bundle an application.
 
