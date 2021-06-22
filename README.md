@@ -152,3 +152,7 @@ When published to [npmjs.com](https://www.npmjs.com), we can use the [unpkg.com]
 ```
 
 [Written by [@danieldietrich](https://twitter.com/danieldietrich)]
+
+# Builder.ts
+
+[gist](https://gist.github.com/danieldietrich/dd352b89b00f4a8e77be01ab1ae22385) by [@danieldietrich](https://twitter.com/danieldietrich)
