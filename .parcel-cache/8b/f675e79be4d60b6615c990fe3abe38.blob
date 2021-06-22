@@ -1,0 +1,2 @@
+import { sayHello } from '../dist/index.mjs';
+            document.getElementById('app').innerHTML = sayHello();

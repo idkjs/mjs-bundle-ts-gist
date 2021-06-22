@@ -1,0 +1,34 @@
+{
+  "name": "mjs-bundle-ts-gist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.min.mjs",
+  "unpkg": "dist/index.umd.min.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -fr dist",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
+    "build": "npm run clean && npm run lint && tsc --project tsconfig.build.json && npm run bundle:esm && npm run bundle:esm:min && npm run bundle:umd && npm run bundle:umd:min && npm run build:stats",
+    "build:stats": "(echo '\\033[35;3m' ; cd dist && ls -lh index*js index*gz | tail -n +2 | awk '{print $5,$9}')",
+    "bundle:esm": "rollup dist/index.js --file dist/index.mjs --format esm",
+    "bundle:esm:min": "terser --ecma 6 --compress --mangle --module -o dist/index.min.mjs -- dist/index.mjs && gzip -9 -c dist/index.min.mjs > dist/index.min.mjs.gz",
+    "bundle:umd": "rollup dist/index.js --file dist/index.umd.js --format umd --name sayHello",
+    "bundle:cjs": "rollup dist/index.js --file dist/index.cjs --format cjs --name sayHello",
+    "bundle:umd:min": "terser --ecma 6 --compress --mangle -o dist/index.umd.min.js -- dist/index.umd.js && gzip -9 -c dist/index.umd.min.js > dist/index.umd.min.js.gz"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "eslint": "^7.20.0",
+    "rollup": "^2.52.2",
+    "terser": "^5.7.0",
+    "typescript": "^4.3.4"
+  }
+}

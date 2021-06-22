@@ -1,0 +1,1 @@
+function n(){return"Hi ya all!"}export{n as sayHello};
